@@ -1,0 +1,21 @@
+.container {
+  width: auto;
+  display: flex;
+  min-height: calc(120vh - 20px);
+  position: relative;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-size: contain;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 54px;
+  text-align: flex-start;
+  color: #270a0a;
+  font-style: italic;
+  padding-left: 30px;
+}

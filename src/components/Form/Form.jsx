@@ -1,16 +1,17 @@
 import { useState } from 'react';
-import { nanoid } from '@reduxjs/toolkit';
+import css from './Form.module.css';
+
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact } from '../../redux/api';
+import { addContact } from '../../redux/contacts/operations';
 import {
   StyledButton,
+  StyledForm,
   StyledFormIput,
   StyledFormLabel,
-  StyledForm,
-} from 'components/Form/FormStyle';
+} from './FormStyled';
 
-const getContacts = state => state.contacts.contacts;
+const getContacts = state => state.contacts.items;
 
 export const Form = () => {
   const contacts = useSelector(getContacts);
@@ -38,7 +39,7 @@ export const Form = () => {
       });
       return;
     }
-    dispatch(addContact({ id: nanoid(), name: name, number: number }));
+    dispatch(addContact({ name, number }));
 
     resetForm();
   };

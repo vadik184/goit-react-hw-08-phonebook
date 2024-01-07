@@ -21,5 +21,5 @@ export const StyledSubTitle = styled('h2')`
   letter-spacing: 0.02em;
   text-align: center;
   color: #122236;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
 `;

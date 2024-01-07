@@ -1,7 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { changeFilter } from '../../redux/filterSlice';
+import css from './Filter.module.css';
+import { changeFilter } from '../../redux/filter/filterSlice';
 import { StyledFilterContainer, StyledFilterText } from './FilterStyle';
-import { StyledFormIput, StyledFormLabel } from 'components/Form/FormStyle';
+import { StyledFormIput, StyledFormLabel } from 'components/Form/FormStyled';
 
 export const Filter = () => {
   const getFilter = state => state.filter.filter;
@@ -11,7 +12,6 @@ export const Filter = () => {
     const { value } = e.currentTarget;
     dispatch(changeFilter(value));
   };
-
   return (
     <StyledFilterContainer>
       <StyledFilterText>Find contacts by name</StyledFilterText>
