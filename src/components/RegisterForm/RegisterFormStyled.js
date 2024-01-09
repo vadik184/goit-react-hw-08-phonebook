@@ -1,42 +1,44 @@
 import styled from 'styled-components';
 
-export const StyledList = styled('ul')`
+export const RegisterContainer = styled('div')`
+  width: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  flex-direction: column;
-  @media (min-width: 478px) {
-    width: 350px;
-  }
-  padding: 0 0 20px 0;
-  border-top: 1px solid #d3d9de;
 `;
-export const StyledListItem = styled('li')`
+export const StyledRegisterForm = styled('form')`
   display: flex;
-  margin-top: 15px;
-  padding: 0 10px 0 10px;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  &:nth-child(odd) {
-    background-color: #ffffff;
-  }
-  &:nth-child(even) {
-    background-color: #ecf1f3;
-  }
+  height: 100%;
 `;
-export const StyledListItemText = styled('p')`
+
+export const StyledRegisterFormLabel = styled('label')`
+  color: #6199c2;
+  padding-bottom: 10px;
+`;
+export const StyledRegisterFormIput = styled('input')`
   display: block;
-  padding-left: 5px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  color: #122236;
-  @media (min-width: 478px) {
-    font-size: 18px;
+  width: 300px;
+  border: 1px solid #7aa7c7;
+  box-shadow: 0px 0px 28px -12px #52b6ff;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #f0f7fc;
+  box-shadow: rgba(12, 47, 89, 0.1) 1px 1px 3px 0 inset;
+  outline: none;
+  &::placeholder {
+    color: #6c92ad;
+  }
+  &:focus {
+    border-color: #153f70;
+  }
+  &:hover {
+    background-color: #fff;
+    transition: all 0.4s ease-in-out;
   }
 `;
-export const StyledDeletButton = styled('button')`
+export const StyledRegisterButton = styled('button')`
+  margin-top: 20px;
   background-color: #e1ecf4;
   border-radius: 3px;
   border: 1px solid #7aa7c7;
@@ -45,13 +47,11 @@ export const StyledDeletButton = styled('button')`
   color: #39739d;
   cursor: pointer;
   display: inline-block;
-
   font-family: -apple-system, system-ui, 'Segoe UI', 'Liberation Sans',
     sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 1.15385;
-  margin: 0;
   outline: none;
   padding: 8px 0.8em;
   position: relative;
@@ -65,9 +65,11 @@ export const StyledDeletButton = styled('button')`
   &:hover {
     background-color: #b3d3ea;
     color: #2c5777;
+    transition: all 0.4s ease-in-out;
   }
   &:focus {
     box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+    transition: all 0.4s ease-in-out;
   }
   &:active {
     background-color: #a0c7e4;

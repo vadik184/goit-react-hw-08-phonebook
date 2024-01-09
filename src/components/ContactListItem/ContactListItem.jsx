@@ -1,19 +1,25 @@
 import { useDispatch } from 'react-redux';
-import css from './ContactListItem.module.css';
 import { deleteContact } from '../../redux/contacts/operations';
+import {
+  StyledDeletButton,
+  StyledListItem,
+  StyledListItemText,
+} from 'components/ContactList/ContactListStyled';
+import { formatName, formatPhoneNumber } from 'helper/Helper';
 
 export const ContactListItem = ({ contact: { id, name, number } }) => {
   const dispatch = useDispatch();
   return (
-    <li className={css.item} key={id}>
-      {name}: {number}
-      <button
-        className={css.button}
+    <StyledListItem key={id}>
+      <StyledListItemText>
+        {formatName(name)}: {formatPhoneNumber(number)}
+      </StyledListItemText>
+      <StyledDeletButton
         type="button"
         onClick={() => dispatch(deleteContact(id))}
       >
         Delete
-      </button>
-    </li>
+      </StyledDeletButton>
+    </StyledListItem>
   );
 };

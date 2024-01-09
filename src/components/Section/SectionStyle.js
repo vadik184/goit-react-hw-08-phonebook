@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const MainSection = styled('section')`
   display: flex;
+  width: 400px;
   padding: 20px;
   flex-direction: column;
   justify-content: center;
@@ -21,5 +22,4 @@ export const StyledSubTitle = styled('h2')`
   letter-spacing: 0.02em;
   text-align: center;
   color: #122236;
-  /* padding-bottom: 30px; */
 `;

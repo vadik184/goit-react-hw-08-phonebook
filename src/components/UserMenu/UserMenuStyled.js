@@ -1,15 +1,18 @@
-.wrapper {
+import styled from 'styled-components';
+
+export const UserMenuStyledDiv = styled('div')`
   display: flex;
   align-items: center;
+  justify-content: center
   gap: 12px;
-}
+`;
 
-.username {
+export const UserMenuStyledText = styled('p')`
   font-weight: 700;
-}
+  margin-right: 25px;
+`;
 
-.button {
-  margin-top: 20px;
+export const UserMenuStyldButton = styled('p')`
   background-color: #e1ecf4;
   border-radius: 3px;
   border: 1px solid #7aa7c7;
@@ -33,18 +36,17 @@
   touch-action: manipulation;
   vertical-align: baseline;
   white-space: nowrap;
-}
-
-.button:hover {
-  background-color: #b3d3ea;
-  color: #2c5777;
-  transition: all 0.4s ease-in-out;
-}
-.button:focus {
-  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
-}
-.button:active {
-  background-color: #a0c7e4;
-  box-shadow: none;
-  color: #2c5777;
-}
+  &:hover {
+    background-color: #b3d3ea;
+    color: #2c5777;
+    transition: all 0.4s ease-in-out;
+  }
+  &:focus {
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+  }
+  &:active {
+    background-color: #a0c7e4;
+    box-shadow: none;
+    color: #2c5777;
+  }
+`;

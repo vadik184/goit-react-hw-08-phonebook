@@ -2,7 +2,6 @@ import { Outlet } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { AppBar } from '../AppBar/AppBar';
 import { Suspense } from 'react';
-import css from './Layout.module.css';
 import { LayoutDiv } from './LayoutStyled';
 
 export const Layout = () => {

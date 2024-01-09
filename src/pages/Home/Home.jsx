@@ -1,10 +1,9 @@
-import css from './Home.module.css';
+import { HomeStyledContainer, HomeStyledText } from './HomeStyled';
 
 export default function Home() {
   return (
-    <div className={css.container}>
-      <h1 className={css.title}>Welcome to Phonebook</h1>
-      <div></div>
-    </div>
+    <HomeStyledContainer>
+      <HomeStyledText>Welcome to Phonebook</HomeStyledText>
+    </HomeStyledContainer>
   );
 }
